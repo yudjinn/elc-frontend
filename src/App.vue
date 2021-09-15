@@ -1,13 +1,33 @@
 <template>
-  <div class="container">
-    <h1>Hello World</h1>
-  </div>
+  <router-view class="nw-landing" />
 </template>
 
-<script>
-export default {
-  name: 'App',
-};
-</script>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
-<style></style>
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+.nw-landing {
+  min-height: 100vh;
+  background-image: url('assets/img/nw-mask.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+</style>
