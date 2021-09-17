@@ -1,0 +1,81 @@
+
+.elc-nav-border {
+  border-color: #43bfd4;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.elc-dark-blue {
+  color: #006072;
+}
+
+.elc-btn-info {
+  min-width: 220px;
+  height: 40px;
+  background-color: #007A91;
+  color: #FFFFFF;
+  border-radius: 20px;
+}
+
+.elc-btn-info-sm {
+  height: 40px;
+  background-color: #007A91;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.elc-btn-danger {
+  min-width: 220px;
+  height: 40px;
+  background-color: red;
+  color: black;
+  border-radius: 20px;
+}
+
+.elc-btn-success {
+  min-width: 220px;
+  height: 40px;
+  background-color: #28a745;
+  color: #FFFFFF;
+  border-radius: 20px;
+}
+
+.elc-btn-outline-info {
+  min-width: 220px;
+  height: 40px;
+  background-color: #FFFFFF;
+  color: #007A91;
+  border-radius: 20px;
+  border: solid 1px #007A91;
+}
+
+.elc-btn-outline-danger-sm {
+  height: 40px;
+  background-color: white;
+  color: red;
+  border-radius: 20px;
+  border: solid 1px red;
+}
+
+.elc-btn-outline-info-sm {
+
+  background-color: #FFFFFF;
+  color: #007A91;
+  border-radius: 5px;
+  border: solid 1px #007A91;
+}
+
+.elc-card {
+  border-radius: 8px;
+  border: solid 1px #006072;
+  background-color: #ffffff;
+}
+
+.elc-card-header {
+    background-color: #006072;
+    color: #FFFFFF;
+}
+
+.elc-logo {
+  max-height: 35px;
+}

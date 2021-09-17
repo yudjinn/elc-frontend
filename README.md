@@ -5,9 +5,9 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development - currently hits the stage server. We can create another env if localhost is server. 
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production

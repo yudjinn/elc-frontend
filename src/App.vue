@@ -1,5 +1,5 @@
 <template  >
-  <router-view class="nw-landing"/>
+  <router-view/>
 </template>
 
 <style>
@@ -24,11 +24,5 @@
   color: #42b983;
 }
 
-.nw-landing {
-  min-height: 100vh;
-  background-image: url('assets/img/nw-mask.jpg');
-  background-repeat: no-repeat;
-	background-size: contain;
 
-}
 </style>
