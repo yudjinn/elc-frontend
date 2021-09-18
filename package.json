@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --open --port 8080 --mode dev",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "stage": "vue-cli-service build --mode stage",
+    "build": "vue-cli-service build --mode prod",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

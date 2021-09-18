@@ -20,7 +20,8 @@ const routes = [
   redirect: '/user/search',
   component: () => import('@/components/Layout.vue') ,
   children : [
-    { path: 'search', name: 'UserSearch', component: () => import('@/user/Search.vue') }
+    { path: 'search', name: 'UserSearch', component: () => import('@/user/Search.vue') },
+    { path: 'user', name: 'User', component: () => import('@/user/User.vue') }
   ]
   }
 ]

@@ -71,9 +71,14 @@ export default {
         if(typeof msg.access_token != 'undefined') NetClient.creds.access_token = msg.access_token
         if(typeof msg.token_type != 'undefined') NetClient.creds.token_type = msg.token_type
 
-        window.localStorage.setItem('creds', JSON.stringify(NetClient.creds))
+        NetClient.doGet('company/', {}).then(msg => {
+          NetClient.company = msg
 
-        this.$router.push({ name: 'UserSearch'})
+          NetClient.doGet('/users/me', {}).then(msg => {
+            NetClient.user = msg
+            this.$router.push({ name: 'UserSearch'})
+          })
+        })
       }).catch(err => {
         console.log('error in response!' + err)
       })

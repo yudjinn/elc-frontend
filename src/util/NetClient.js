@@ -6,12 +6,14 @@ var NetClient = {
     access_token: '',
     token_type: ''
   },
+  user: {
+    id: '',
+    username: ''
+  },
+  company: '',
+
   init: function(_router) {
     this.router = _router
-
-    this.creads = JSON.parse(window.localStorage.getItem('creds'))
-    if(null == this.dreds) this.creds = { access_token: '', token_type: ''}
-
   },
   doGet: function (_svc, _params) {
     var nc = this
