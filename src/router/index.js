@@ -12,7 +12,8 @@ const routes = [
   redirect: '/bank/search',
   component: () => import('@/components/Layout.vue') ,
   children : [
-    { path: 'search', name: 'BankSearch', component: () => import('@/bank/Search.vue') }
+    { path: 'search', name: 'BankSearch', component: () => import('@/bank/Search.vue') },
+    { path: 'bank', name: 'Bank', component: () => import('@/bank/Bank.vue') }
   ]
   },
   {

@@ -53,6 +53,10 @@
               <label class="control-label">Rank {{ user.rank}}</label>
               <select id="rel" class="form-control" v-model="user.rank" @change="isDirty=true">
                 <option v-for="item in rank.keys" :key="item" :value="item">{{ rank[item] }}</option>
+                <!-- <option value="SETTLER">Settler</option>
+                <option value="OFFICER">Officer</option>
+                <option value="CONSUL">Consul</option>
+                <option value="GOVERNER">Governer</option> -->
               </select>
             </div>
           </div>
@@ -149,7 +153,7 @@ export default {
     setCompany () {
       var req = 'company/' + NetClient.user.company_id + '/' + this.user.id + '/' + this.user.rank
 
-      NetClient.doPost(req,{ name: 'DoNothing'}).then(msg => {
+      NetClient.doPost(req,null).then(msg => {
         console.log(msg)
       })
     },
@@ -188,6 +192,10 @@ export default {
         this.user.password = this.password
 
       }
+
+      if(null == this.user.discord_id) this.user.discord_id = ''
+      if(null == this.user.discord_name) this.user.discord_name = ''
+      if(null == this.user.in_game_name) this.user.in_game_name = ''
 
       if(this.user.id.length < 10)
       {
