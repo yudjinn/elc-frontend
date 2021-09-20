@@ -90,7 +90,7 @@
         <div class="row">
           <div class="col-xs-12 col-md-6 text-center">
             <button v-show="showCancel==true" class="btn elc-btn-outline-info" @click="cancel()">Cancel</button>
-            <button v-show="showSwitchCompany==true" class="btn elc-btn-outline-info" @click="setCompany()">Set Company</button>
+            <button class="btn elc-btn-outline-info" @click="setCompany()">Set Company</button>
           </div>
           <div class="col-xs-12 col-md-6 text-center">
             <button class="btn elc-btn-success" :disabled="isDirty==false" @click="save()">Save</button>
@@ -153,9 +153,19 @@ export default {
     setCompany () {
       var req = 'company/' + NetClient.user.company_id + '/' + this.user.id + '/' + this.user.rank
 
-      NetClient.doPost(req,null).then(msg => {
-        console.log(msg)
+      NetClient.doPost(req,{nothing:''}).then(msg => {
+        var ii
+        for(ii=0;ii<msg.length;ii++)
+        {
+          if(msg[ii].id == this.user.id)
+          {
+            this.user = msg[ii]
+            break
+          }
+        }
       })
+    //  this.user.company_id = NetClient.user.company_id
+    //  this.isDirty = true
     },
 
     emptyUser ()  {
